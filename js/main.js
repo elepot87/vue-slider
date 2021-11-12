@@ -48,5 +48,8 @@ const app = new Vue({
         this.currentSlide = 0;
       }
     },
+    activateImage(index) {
+      this.currentSlide = index;
+    },
   },
 });
