@@ -42,5 +42,11 @@ const app = new Vue({
         this.currentSlide = this.slides.length - 1;
       }
     },
+    nextSlide() {
+      this.currentSlide++;
+      if (this.currentSlide > this.slides.length - 1) {
+        this.currentSlide = 0;
+      }
+    },
   },
 });
