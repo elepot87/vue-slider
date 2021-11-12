@@ -15,11 +15,14 @@
         <!-- Images -->
         <div class="images">
           <!-- genera con vue -->
-          <div class="image-container" v-for="slide in slides">
-            <img :src="slide.image" :alt="slide.title" />
+          <div class="image-container" v-for="slide in [currentSlide]">
+            <img
+              :src="slides[currentSlide].image"
+              :alt="slides[currentSlide].title"
+            />
             <div class="text">
-              <h3>{{slide.title}}</h3>
-              <p>{{slide.text}}</p>
+              <h3>{{slides[currentSlide].title}}</h3>
+              <p>{{slides[currentSlide].text}}</p>
             </div>
           </div>
         </div>
