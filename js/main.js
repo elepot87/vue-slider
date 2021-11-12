@@ -32,6 +32,6 @@ const app = new Vue({
         text: "Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.",
       },
     ],
-    currentSlide = 0,
+    currentSlide: 0,
   },
 });
