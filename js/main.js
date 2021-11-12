@@ -55,9 +55,9 @@ const app = new Vue({
 
     play() {
       let slider = this;
-      this.timer = setInterval(function () {
+      this.timer = setInterval(() => {
         slider.nextSlide();
-      }, 2000);
+      }, 3000);
     },
   },
   created: function () {
