@@ -34,9 +34,13 @@ const app = new Vue({
     ],
     currentSlide: 0,
   },
+
   methods: {
     prevSlide() {
-      console.log("clic");
+      this.currentSlide--;
+      if (this.currentSlide < 0) {
+        this.currentSlide = this.slides.length - 1;
+      }
     },
   },
 });
