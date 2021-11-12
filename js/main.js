@@ -42,15 +42,18 @@ const app = new Vue({
       if (this.currentSlide < 0) {
         this.currentSlide = this.slides.length - 1;
       }
+      this.resetPlay();
     },
     nextSlide() {
       this.currentSlide++;
       if (this.currentSlide > this.slides.length - 1) {
         this.currentSlide = 0;
       }
+      this.resetPlay();
     },
     activateImage(index) {
       this.currentSlide = index;
+      this.resetPlay();
     },
 
     play() {
@@ -58,6 +61,11 @@ const app = new Vue({
       this.timer = setInterval(() => {
         slider.nextSlide();
       }, 3000);
+    },
+
+    resetPlay() {
+      clearInterval(this.timer);
+      this.play();
     },
   },
   created: function () {
