@@ -33,6 +33,7 @@ const app = new Vue({
       },
     ],
     currentSlide: 0,
+    timer: 0,
   },
 
   methods: {
@@ -51,5 +52,15 @@ const app = new Vue({
     activateImage(index) {
       this.currentSlide = index;
     },
+
+    play() {
+      let slider = this;
+      this.timer = setInterval(function () {
+        slider.nextSlide();
+      }, 2000);
+    },
+  },
+  created: function () {
+    this.play();
   },
 });
